@@ -1,0 +1,10 @@
+name: "PrintTestEnvVar"
+description: "just a test"
+
+runs:
+  using: 'composite'
+  steps:
+    - run: echo "Hello World!"
+      shell: pwsh
+    - run: echo "${{ env.TEST }}"
+      shell: pwsh
